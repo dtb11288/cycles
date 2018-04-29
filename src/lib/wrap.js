@@ -3,7 +3,7 @@ import serialize from 'serialize-javascript'
 import { evolve } from 'ramda'
 import { html, head, title, body, meta, div, script } from '@cycle/dom'
 
-const wrapVTree = ([vtree, context, bundle]) => {
+const wrapVTree = ([vtree, state, bundle]) => {
   return (
     html([
       head([
@@ -12,8 +12,8 @@ const wrapVTree = ([vtree, context, bundle]) => {
       ]),
       body([
         div('#root', [vtree]),
-        script(`window.__APP_CONTEXT__ = ${serialize(context)};`),
-        script({ props: { src: '/public/bundle.js' } })
+        script(`window.__INITIAL_STATE__ = ${serialize(state)};`),
+        script({ props: { src: bundle } })
       ])
     ])
   )

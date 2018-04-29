@@ -1,6 +1,5 @@
 import xs from 'xstream'
 import browserify from 'browserify'
-import serialize from 'serialize-javascript'
 import log from './log'
 import fs from 'fs'
 import path from 'path'
@@ -18,7 +17,7 @@ export default client => {
   bundleStream.on('end', () => {
     const buffer = Buffer.concat(bundleString).toString()
     return fs.writeFile(path.join(__dirname, '..', 'public', 'bundle.js'), buffer, () => {
-      bundle$.shamefullySendNext(buffer)
+      bundle$.shamefullySendNext('/public/bundle.js')
       log.info('Client bundle successfully compiled')
     })
   })
