@@ -1,0 +1,42 @@
+{
+  "name": "gemriverside",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "./node_modules/.bin/nodemon --ignore 'src/public/*' --exec babel-node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/3c7v/gemriverside.git"
+  },
+  "author": "Binh",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/3c7v/gemriverside#readme",
+  "dependencies": {
+    "@cycle/dom": "^20.2.0",
+    "@cycle/html": "^2.4.0",
+    "@cycle/http": "^14.9.0",
+    "@cycle/run": "^4.1.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
+    "body-parser": "^1.18.2",
+    "browserify": "^16.1.1",
+    "cyclic-router": "^4.0.7",
+    "history": "^4.7.2",
+    "knex": "^0.14.4",
+    "multiparty": "^4.1.3",
+    "ramda": "^0.25.0",
+    "serialize-javascript": "^1.4.0",
+    "sqlite3": "^4.0.0",
+    "switch-path": "^1.2.0",
+    "typestyle": "^1.7.2",
+    "uglifyify": "^4.0.5",
+    "winston": "^2.4.1",
+    "xstream": "^11.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}
